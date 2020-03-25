@@ -1,11 +1,11 @@
-name: Node.js CI
+name: Jest CI
 
 on: [push]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: alpine-latest
 
     steps:
     - uses: actions/checkout@v2
