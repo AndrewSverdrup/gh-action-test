@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
 
-    runs-on: docker://alpine:latest
+    runs-on: docker://alpine
 
     steps:
     - uses: actions/checkout@v2
