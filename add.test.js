@@ -1,7 +1,7 @@
-var add = require("./add").add;
+var add = require('./add').add;
 
-describe("add", function () {
-  it("should add two numbers", function () {
-    expect(add(1, 2)).toEqual(3);
+describe('add', function() {
+  it('should add two numbers', function() {
+    expect(add(1, 2)).toEqual(3)
   });
 });
