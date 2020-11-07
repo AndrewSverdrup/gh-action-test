@@ -24,6 +24,7 @@ jobs:
         uses: wearerequired/lint-action@v1
         with:
           github_token: ${{ secrets.github_token }}
+          auto_fix: true
           # Enable linters
           eslint: true
           prettier: true
