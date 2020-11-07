@@ -14,7 +14,7 @@ jobs:
     - name: Echo file changes
       run: |
         echo Changed files: ${{ steps.get_file_changes.outputs.files }}
-
+    - uses: actions/checkout@v2
     - name: Install modules
       run: yarn
     - name: Run ESLint
