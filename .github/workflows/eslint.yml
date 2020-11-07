@@ -4,11 +4,26 @@ on: push
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check for ESLint errors
-      uses: getsentry/action-eslint-fix@v1
+    - name: Get file changes
+      id: get_file_changes
+      uses: trilom/file-changes-action@v1.2.3
       with:
-        dry: true
+        output: ' '
+    - name: Echo file changes
+      run: |
+        echo Changed files: ${{ steps.get_file_changes.outputs.files }}
+
+    - name: Install modules
+      run: yarn
+    - name: Run ESLint
+      run: eslint ${{ steps.get_file_changes.outputs.files }}
+
+
+
+    # - uses: actions/checkout@v2
+    # - name: Install modules
+    #   run: yarn
+    # - name: Run ESLint
+    #   run: eslint . --ext .js,.jsx,.ts,.tsx
