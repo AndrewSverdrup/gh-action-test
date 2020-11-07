@@ -25,7 +25,7 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           auto_fix: true
-          check_name: ESLint
+          check_name: "${linter}"
           # Enable linters
           eslint: true
 
@@ -34,7 +34,7 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           auto_fix: true
-          check_name: Prettier
+          check_name: "${linter}"
           # Enable linters
           prettier: true
 
