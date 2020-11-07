@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Check for ESLint errors
-    uses: getsentry/action-eslint-fix@v1
-    with:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      dry: true
+      uses: getsentry/action-eslint-fix@v1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        dry: true
