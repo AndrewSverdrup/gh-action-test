@@ -25,8 +25,17 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           auto_fix: true
+          check_name: ESLint
           # Enable linters
           eslint: true
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          auto_fix: true
+          check_name: Prettier
+          # Enable linters
           prettier: true
 
 
